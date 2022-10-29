@@ -10,7 +10,7 @@ Maven
 H2 database 
 JPA y Hibernate
 
-La aplicacion cuenta con 5 cuentas precargadas, y tiene disponibles los siguientes endpoint:
+La aplicacio tiene disponibles los siguientes endpoint:
 
 - **GET: /contactos/**, retorna listado de contactos en formato json 
 - **GET: /contactos/{id}**, retorna el detalle de un contacto en formato json
