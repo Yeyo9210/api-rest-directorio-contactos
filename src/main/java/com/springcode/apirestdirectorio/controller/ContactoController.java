@@ -31,7 +31,7 @@ public class ContactoController {
                     contactoGuardado.setCelular(contactoDTO.getCelular());
                     contactoGuardado.setFechaRegistro(contactoDTO.getFechaRegistro());
 
-                    ContactoDTO contactoDTO1 = contactoService.updateContacto(contactoGuardado);
+                    contactoService.updateContacto(contactoGuardado);
 
                     return new ResponseEntity<>(contactoGuardado,HttpStatus.OK);
                 })
@@ -50,7 +50,9 @@ public class ContactoController {
     }
 
     @DeleteMapping("/{id}")
-    private void deleteContacto(@PathVariable("id") Long id){
+    private ResponseEntity<String> deleteContacto(@PathVariable("id") Long id){
         contactoService.deleteContacto(id);
+        return new ResponseEntity<>("Contacto eliminado exitosamente"+id,HttpStatus.OK);
+
     }
 }
